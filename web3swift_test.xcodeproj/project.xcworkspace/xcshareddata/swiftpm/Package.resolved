@@ -1,13 +1,13 @@
 {
-  "originHash" : "6d902728e045f049eb2c5f6a4db9066b1dcfa214ebb5af375a0ad53bc480d392",
+  "originHash" : "56a3513090ed8595de80bd8b4ae1f00210fdaa7dd2007109bfdd7f59da8b7aca",
   "pins" : [
     {
       "identity" : "bigint",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/attaswift/BigInt.git",
       "state" : {
-        "revision" : "793a7fac0bfc318e85994bf6900652e827aef33e",
-        "version" : "5.4.1"
+        "revision" : "0ed110f7555c34ff468e72e1686e59721f2b0da6",
+        "version" : "5.3.0"
       }
     },
     {
@@ -15,8 +15,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/krzyzanowskim/CryptoSwift.git",
       "state" : {
-        "revision" : "c9c3df6ab812de32bae61fc0cd1bf6d45170ebf0",
-        "version" : "1.8.2"
+        "revision" : "039f56c5d7960f277087a0be51f5eb04ed0ec073",
+        "version" : "1.5.1"
+      }
+    },
+    {
+      "identity" : "web3swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/web3swift-team/web3swift.git",
+      "state" : {
+        "revision" : "60a56e3b9c4cd0568d84acde27af2f25d2a8ff4d",
+        "version" : "3.2.1"
       }
     }
   ],

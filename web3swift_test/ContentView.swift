@@ -16,6 +16,7 @@ struct ContentView: View {
     @State var gasPrice: BigUInt = 0
     @State var balance: BigUInt = 0
     @State var txHash = ""
+    @State var writeContractFunctionTxHash = ""
     
     var body: some View {
         ScrollView{
@@ -25,6 +26,8 @@ struct ContentView: View {
                 balanceNode
                 
                 signAndSendTxNode
+                
+                writeToContractFunctionNode
             }
         }
         .padding()
@@ -72,6 +75,20 @@ struct ContentView: View {
             }
             
             Text("tx hash: \(txHash)")
+        }
+    }
+    
+    var writeToContractFunctionNode: some View {
+        Group{
+            Button {
+                Task{
+                    writeContractFunctionTxHash = await viewModel.writeToContractFunction() ?? "Error"
+                }
+            } label: {
+                Text("write To Contract Functions")
+            }
+            
+            Text("result: \(writeContractFunctionTxHash)")
         }
     }
 }

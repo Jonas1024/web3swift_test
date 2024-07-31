@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4969FACD2C5A6CBA00F25285 /* web3swift in Frameworks */ = {isa = PBXBuildFile; productRef = 4969FACC2C5A6CBA00F25285 /* web3swift */; };
 		49DAEB702C58A6F900B47F7E /* web3swift in Frameworks */ = {isa = PBXBuildFile; productRef = 49DAEB6F2C58A6F900B47F7E /* web3swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49DAEB702C58A6F900B47F7E /* web3swift in Frameworks */,
+				4969FACD2C5A6CBA00F25285 /* web3swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +108,7 @@
 			name = web3swift_test;
 			packageProductDependencies = (
 				49DAEB6F2C58A6F900B47F7E /* web3swift */,
+				4969FACC2C5A6CBA00F25285 /* web3swift */,
 			);
 			productName = web3swift_test;
 			productReference = 49DAEB222C58989000B47F7E /* web3swift_test.app */;
@@ -190,7 +193,7 @@
 			);
 			mainGroup = 49DAEB192C58989000B47F7E;
 			packageReferences = (
-				49DAEB6E2C58A6F900B47F7E /* XCLocalSwiftPackageReference "../../../Downloads/web3swift" */,
+				4969FACB2C5A6CBA00F25285 /* XCRemoteSwiftPackageReference "web3swift" */,
 			);
 			productRefGroup = 49DAEB232C58989000B47F7E /* Products */;
 			projectDirPath = "";
@@ -557,14 +560,23 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		49DAEB6E2C58A6F900B47F7E /* XCLocalSwiftPackageReference "../../../Downloads/web3swift" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../Downloads/web3swift;
+/* Begin XCRemoteSwiftPackageReference section */
+		4969FACB2C5A6CBA00F25285 /* XCRemoteSwiftPackageReference "web3swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/web3swift-team/web3swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.1;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4969FACC2C5A6CBA00F25285 /* web3swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4969FACB2C5A6CBA00F25285 /* XCRemoteSwiftPackageReference "web3swift" */;
+			productName = web3swift;
+		};
 		49DAEB6F2C58A6F900B47F7E /* web3swift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = web3swift;

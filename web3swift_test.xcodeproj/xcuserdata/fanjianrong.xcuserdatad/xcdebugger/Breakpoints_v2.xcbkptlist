@@ -39,38 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "81B47DB1-6D66-4132-B423-1FC5BCB258C8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "web3swift_test/ViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "getBalance(adress:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8A09B3C9-9E21-4262-83A3-46909B34023F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "web3swift_test/ViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "signAndSendTx(amount:toAdress:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "610464EA-3781-4D41-B5A9-C16EAED38E9E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -81,22 +49,6 @@
             startingLineNumber = "84"
             endingLineNumber = "84"
             landmarkName = "init?(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9DDE75D8-4A3E-4B49-A4C2-27256BE2F3CA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "web3swift_test/ViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "signAndSendTx(amount:toAdress:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -119,56 +71,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DA952A5F-A5D7-4DD7-8CC3-8771646453A2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../Downloads/web3swift/Sources/Web3Core/EthereumNetwork/Request/APIRequest+Methods.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "send(_:parameters:with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "45122CB4-8EA4-4F44-96B0-049534F55145"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../Downloads/web3swift/Sources/Web3Core/EthereumNetwork/Request/APIRequest+Methods.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "send(_:parameters:with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4915AB77-9311-4921-AE87-DB8EA8EB2DD8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../Downloads/web3swift/Sources/Web3Core/EthereumNetwork/Request/APIRequest+Methods.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "send(_:parameters:with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B58F13F3-EBD5-4F02-A551-CBE15AA755FF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../Downloads/web3swift/Sources/Web3Core/EthereumNetwork/Request/APIRequest+Methods.swift"
@@ -177,6 +81,186 @@
             startingLineNumber = "115"
             endingLineNumber = "115"
             landmarkName = "send(_:parameters:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB40668D-8344-415A-A804-C7B9B50FF751"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Downloads/web3swift/Sources/Web3Core/Transaction/Envelope/LegacyEnvelope.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "setUnmarshalledSignatureData(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F3473F3-48E7-4B33-AEC6-A7066CCE10D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "web3swift_test/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "writeToContractFunction()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8F3473F3-48E7-4B33-AEC6-A7066CCE10D8 - e0d70346205e3569"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for web3swift_test.Web3ViewModel.writeToContractFunction() async -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "web3swift_test.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fanjianrong/Practise/git/web3swift_test/web3swift_test/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119">
+               </Location>
+               <Location
+                  uuid = "8F3473F3-48E7-4B33-AEC6-A7066CCE10D8 - e0d70346205e35ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for web3swift_test.Web3ViewModel.writeToContractFunction() async -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "web3swift_test.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fanjianrong/Practise/git/web3swift_test/web3swift_test/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95C13F9D-D1AD-4422-BBEB-B13F0AE430FB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "web3swift_test/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "writeToContractFunction()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "95C13F9D-D1AD-4422-BBEB-B13F0AE430FB - e0d70346205e36b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for web3swift_test.Web3ViewModel.writeToContractFunction() async -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "web3swift_test.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fanjianrong/Practise/git/web3swift_test/web3swift_test/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125">
+               </Location>
+               <Location
+                  uuid = "95C13F9D-D1AD-4422-BBEB-B13F0AE430FB - 39dbb8e10e88be01"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for web3swift_test.Web3ViewModel.writeToContractFunction() async -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "web3swift_test.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fanjianrong/Practise/git/web3swift_test/web3swift_test/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125">
+               </Location>
+               <Location
+                  uuid = "95C13F9D-D1AD-4422-BBEB-B13F0AE430FB - 3c0e40ef25f3b9c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for web3swift_test.Web3ViewModel.writeToContractFunction() async -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "web3swift_test.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fanjianrong/Practise/git/web3swift_test/web3swift_test/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115">
+               </Location>
+               <Location
+                  uuid = "95C13F9D-D1AD-4422-BBEB-B13F0AE430FB - 3c0e40ef25f3ba91"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for web3swift_test.Web3ViewModel.writeToContractFunction() async -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "web3swift_test.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fanjianrong/Practise/git/web3swift_test/web3swift_test/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125">
+               </Location>
+               <Location
+                  uuid = "95C13F9D-D1AD-4422-BBEB-B13F0AE430FB - 30b52f69d8cffcde"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for web3swift_test.Web3ViewModel.writeToContractFunction() async -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "web3swift_test.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fanjianrong/Practise/git/web3swift_test/web3swift_test/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125">
+               </Location>
+               <Location
+                  uuid = "95C13F9D-D1AD-4422-BBEB-B13F0AE430FB - e0d70346205e352f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for web3swift_test.Web3ViewModel.writeToContractFunction() async -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "web3swift_test.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fanjianrong/Practise/git/web3swift_test/web3swift_test/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A9D6B96-42A8-41A1-8140-9018EC80DB68"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "web3swift_test/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "setup()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

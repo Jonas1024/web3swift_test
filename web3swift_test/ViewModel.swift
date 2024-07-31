@@ -16,6 +16,7 @@ class Web3ViewModel: ObservableObject  {
     let url = "http://127.0.0.1:7545"
     var fromAddress: String = ""
     let toAddress = "0xC0B05B621Ab20123bfC52186708444c783351e69"
+    let contractAddressHex = "0x1862e9A6a536074A2C617c49862234b87b7d5ef6"
     
     var web3: Web3!
     
@@ -30,12 +31,9 @@ class Web3ViewModel: ObservableObject  {
             }
             
             self.fromAddress = walletAddress.address
-            let privateKey = try tempWalletAddress?.UNSAFE_getPrivateKeyData(password: "", account: walletAddress)
-            print(privateKey!)
-            
             
             let keystoreManager = KeystoreManager([tempWalletAddress!])
-            let httpProvider = try await Web3HttpProvider(url: URL(string: url)!, network: nil, keystoreManager: keystoreManager)
+            let httpProvider = try await Web3HttpProvider(url: URL(string: url)!, network: Networks.fromInt(1337), keystoreManager: keystoreManager)
             self.web3 = Web3(provider: httpProvider)
             print(self.web3!)
             
@@ -80,12 +78,11 @@ class Web3ViewModel: ObservableObject  {
             var gastx = CodableTransaction(
                 type: .eip1559,
                 to: EthereumAddress(self.toAddress)!,
-                chainID: web3.provider.network!.chainID,
+                chainID: 1337,
                 value: amount
             )
             gastx.from = EthereumAddress(self.fromAddress)!
             let gas =  try await self.web3.eth.estimateGas(for: gastx)
-            
             let nonce = try await self.web3.eth.getTransactionCount(for: EthereumAddress(self.fromAddress)!)
             
             var tx = CodableTransaction(
@@ -98,9 +95,7 @@ class Web3ViewModel: ObservableObject  {
                 maxFeePerGas: Utilities.parseToBigUInt("21", units: .gwei),
                 maxPriorityFeePerGas: Utilities.parseToBigUInt("1", units: .gwei),
                 gasPrice: gasPrice
-                
             )
-            tx.from = EthereumAddress(self.fromAddress)!
             
             try Web3Signer.signTX(transaction: &tx,
                                   keystore: self.web3.provider.attachedKeystoreManager!,
@@ -108,12 +103,55 @@ class Web3ViewModel: ObservableObject  {
                                   password: "")
             
             let data = tx.encode(for: .transaction)
-            
             let result: TransactionSendingResult = try await self.web3.eth.send(raw: data!)
+            print(result)
+            return result.transaction.description
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+    
+    func writeToContractFunction() async -> String? {
+        guard let contractAddress = EthereumAddress(contractAddressHex) else {
+            return nil
+        }
+        
+        guard let data = abiJson.data(using: .utf8) else {
+            return nil
+        }
+        
+        
+        do {
+            let nonce = try await self.web3.eth.getTransactionCount(for: EthereumAddress(self.fromAddress)!)
             
-//            let result: TransactionSendingResult = try await self.web3.eth.send(tx)
-            let string = convertHexStringToNormalString(hexString: result.hash)
-            return "a"
+            let tx = CodableTransaction(
+                type: .eip1559,
+                to: contractAddress,
+                nonce: nonce,
+                chainID: 1337
+            )
+            guard let contract = self.web3.contract(abiJson, at: contractAddress) else {
+                return nil
+            }
+            contract.transaction = tx
+            
+            print("contract.methods.count: \(contract.contract.methods.count)")
+            
+            
+            let parameters: [Any] = [BigUInt.randomInteger(withMaximumWidth: 200),
+                                     BigUInt(0),
+                                     BigUInt(2),
+                                     true,
+                                     BigUInt(1),
+                                     Data()]
+            let writeOperation = contract.createWriteOperation("transitStateGeneric", parameters: parameters)!
+            writeOperation.transaction.from = EthereumAddress(self.fromAddress)!
+            writeOperation.transaction.nonce = nonce
+            
+            let result = try await writeOperation.writeToChain(password: "", policies: Policies(gasLimitPolicy: .manual(3000000)), sendRaw: true)
+            print(result)
+            return result.transaction.description
         } catch {
             print(error)
             return nil
