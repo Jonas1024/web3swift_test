@@ -116,28 +116,11 @@ class Web3ViewModel: ObservableObject  {
         guard let contractAddress = EthereumAddress(contractAddressHex) else {
             return nil
         }
-        
-        guard let data = abiJson.data(using: .utf8) else {
-            return nil
-        }
-        
-        
         do {
-            let nonce = try await self.web3.eth.getTransactionCount(for: EthereumAddress(self.fromAddress)!)
-            
-            let tx = CodableTransaction(
-                type: .eip1559,
-                to: contractAddress,
-                nonce: nonce,
-                chainID: 1337
-            )
             guard let contract = self.web3.contract(abiJson, at: contractAddress) else {
                 return nil
             }
-            contract.transaction = tx
-            
-            print("contract.methods.count: \(contract.contract.methods.count)")
-            
+            contract.transaction = CodableTransaction(type: .eip1559, to: contractAddress)
             
             let parameters: [Any] = [BigUInt.randomInteger(withMaximumWidth: 200),
                                      BigUInt(0),
@@ -147,11 +130,33 @@ class Web3ViewModel: ObservableObject  {
                                      Data()]
             let writeOperation = contract.createWriteOperation("transitStateGeneric", parameters: parameters)!
             writeOperation.transaction.from = EthereumAddress(self.fromAddress)!
-            writeOperation.transaction.nonce = nonce
             
             let result = try await writeOperation.writeToChain(password: "", policies: Policies(gasLimitPolicy: .manual(3000000)), sendRaw: true)
-            print(result)
-            return result.transaction.description
+            
+            print(result.hash)
+            return result.hash
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+    
+    func readFromContractFunction() async -> [String: Any]? {
+        do {
+            guard let contract = self.web3.contract(abiJson, at: EthereumAddress(contractAddressHex)!) else {
+                return nil
+            }
+            contract.transaction = CodableTransaction(type: .eip1559, to: EthereumAddress(contractAddressHex)!)
+            
+            let method = "getGISTProof"
+            let holderDIDBigIntString: BigUInt = BigUInt(stringLiteral: "123")
+            let readOperation = contract.createReadOperation(method, parameters: [holderDIDBigIntString])!
+            
+            readOperation.transaction.from = EthereumAddress(self.fromAddress)!
+            let tokenBalanceResponse = try await readOperation.callContractMethod()
+            
+            print(tokenBalanceResponse)
+            return tokenBalanceResponse
         } catch {
             print(error)
             return nil

@@ -17,6 +17,7 @@ struct ContentView: View {
     @State var balance: BigUInt = 0
     @State var txHash = ""
     @State var writeContractFunctionTxHash = ""
+    @State var readContractFunctionResult: [String: Any] = [:]
     
     var body: some View {
         ScrollView{
@@ -28,6 +29,8 @@ struct ContentView: View {
                 signAndSendTxNode
                 
                 writeToContractFunctionNode
+                
+                readFromContractFunctionNode
             }
         }
         .padding()
@@ -91,6 +94,24 @@ struct ContentView: View {
             Text("result: \(writeContractFunctionTxHash)")
         }
     }
+    
+    var readFromContractFunctionNode: some View {
+        Group{
+            Button {
+                Task{
+                    readContractFunctionResult = await viewModel.readFromContractFunction() ?? [:]
+                }
+            } label: {
+                Text("Read Data from Contract Functions")
+            }
+            
+            Text("result: \(readContractFunctionResult)")
+        }
+    }
+    
+    
+    
+    
 }
 
 #Preview {
